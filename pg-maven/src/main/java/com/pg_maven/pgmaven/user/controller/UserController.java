@@ -19,6 +19,8 @@ public class UserController {
     @GetMapping("/{userID}")
     public User GetUser(@PathVariable UUID userID) {
 
-        return new User();
+        User user = new User();
+        user.setID(userID);
+        return user;
     }
 }
